@@ -1,0 +1,10 @@
+<view class="topBox">
+  <image src="https://ws1.sinaimg.cn/large/006tKfTcgy1fir7abc894j30760760t7.jpg" mode="aspectFill"></image>
+  <text>v1.0.0</text>
+</view>
+<view class="bottomBox">
+  <view class="softHtp">
+    <!-- <navigator url="../protocol/protocol">软件许可协议</navigator> -->
+  </view>
+   <view>live_c</view> 
+</view>
