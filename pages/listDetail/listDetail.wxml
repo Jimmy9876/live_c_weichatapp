@@ -14,8 +14,10 @@
     </view>
     <template is="listTemp" data="{{listPic:listPic,listTitle:listTitle,listContent:listContent}}" />
     <view class="conent_user">
-      <image mode="aspectFill" src="{{userPic}}"></image>
-      <view>{{userNick}}</view>
+      <!-- <text class="tblin_items_txt" selectable="true">123</text> -->
+      <view bindtap="copyTBL" class='tao_link'></view><!-- 复制操作 -->
+      <!-- <image mode="aspectFill" src="{{userPic}}"></image> -->
+      <!-- <view>{{userNick}}</view> -->
     </view>
     <view class="detail_footer">
       <view class="content_header_right">{{publishTime}}</view>

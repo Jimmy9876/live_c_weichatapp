@@ -510,6 +510,41 @@ Page({
   onPullDownRefresh: function () {
     wx.stopPullDownRefresh()
   },
+  copyTBL: function (e) {
+    var Diary = Bmob.Object.extend("Diary");
+    var query = new Bmob.Query(Diary);
+    query.equalTo("objectId", optionId);
+    query.include("publisher");
+    query.find({
+      success: function (result) {
+        var link = result[0].get("tao_link");
+        wx.setClipboardData({
+          data: link,
+          success: function (res) {
+            // self.setData({copyTip:true}),
+            wx.showModal({
+              title: '提示',
+              content: '复制成功，打开淘宝即可跳转购买～',
+              success: function (res) {
+                if (res.confirm) {
+                  console.log('确定')
+                } else if (res.cancel) {
+                  console.log('取消')
+                }
+              }
+            })
+          }
+        });
+      },
+      error: function (error) {
+        // common.dataLoading(error,"loading");
+        that.setData({
+          loading: true
+        })
+        console.log(error)
+      }
+    });
+  },
   seeBig: function (e) {
     wx.previewImage({
       current: that.data.listPic, // 当前显示图片的http链接

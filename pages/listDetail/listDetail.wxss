@@ -362,3 +362,15 @@ page {
 .font_grap {
   color: #a8a8a8;
 }
+
+.tao_link{
+    /* background-color: greenyellow; */
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 6rpx;
+    background-size: contain;
+    background-image: url(https://ws3.sinaimg.cn/large/006tNbRwgy1fp9wbqq8dnj306406djrc.jpg);
+}
